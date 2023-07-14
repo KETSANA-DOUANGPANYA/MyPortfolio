@@ -42,4 +42,9 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 
+    // Animation for footer on scroll
+    let footer = document.querySelector('footor');
+
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight)
+
 }

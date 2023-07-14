@@ -128,6 +128,12 @@ section {
     animation-delay: 2s;
 }
 
+.home.show-animate .home-content .text-animate h3 {
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+
+}
+
 .home-content .text-animate h3::before {
     content: '';
     position: absolute;
@@ -140,6 +146,11 @@ section {
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 
+}
+
+.home.show-animate .home-content .text-animate h3::before {
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home-content p {
@@ -658,6 +669,11 @@ span {
     background: var(--second-bg-color);
 }
 
+.footer-text,
+.footer-iconTop {
+    position: relative;
+}
+
 .footer-text p {
     font-size: 1.6rem;
 }
@@ -707,7 +723,7 @@ span {
     right: 0;
     width: 100%;
     height: 100%;
-    background: yellowgreen;
+    background: var(--bg-color);
     z-index: 98;
 }
 
@@ -730,6 +746,11 @@ span {
     
 }
 
+section:nth-child(odd) .animate.scroll,
+footer .animate.scroll {
+    background: var(--second-bg-color);
+}
+
 .education .education-box .animate.scroll {
     width: 105%;
 }
@@ -737,7 +758,8 @@ span {
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.contact.show-animate .animate.scroll {
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 
@@ -767,6 +789,13 @@ span {
     .footer {
         padding: 2rem 4%;
     }
+}
+
+@media (max-width: 850px){
+    .animate.home-img {
+        width: 55%;
+    }
+
 }
 
 @media (max-width: 768px) {
