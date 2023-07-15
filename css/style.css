@@ -112,27 +112,27 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 32.8rem;
+    width: 35.8rem;
 }
 
 .home-content .text-animate h3 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
     background-image: linear-gradient(var(--main-color),var(--main-color));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: -33rem 0;
+    background-position: -36rem 0;
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 }
 
-.home.show-animate .home-content .text-animate h3 {
+/* .home.show-animate .home-content .text-animate h3 {
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 
-}
+} */
 
 .home-content .text-animate h3::before {
     content: '';
@@ -148,10 +148,10 @@ section {
 
 }
 
-.home.show-animate .home-content .text-animate h3::before {
+/* .home.show-animate .home-content .text-animate h3::before {
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
-}
+} */
 
 .home-content p {
     position: relative;
@@ -932,7 +932,7 @@ footer .animate.scroll {
 /* KEYFRAMES ANNIMATION */
 @keyframes homeBgText {
     0%,10%,100% {
-        background-position: -33rem 0;
+        background-position: -36rem 0;
     }
 
     65%,85% {
