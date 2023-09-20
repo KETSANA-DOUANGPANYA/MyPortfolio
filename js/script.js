@@ -46,3 +46,38 @@ window.onscroll = () => {
     let footer = document.querySelector('footer');
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight)
 }
+
+
+// HTTP
+// Get a reference to the form element
+const contactForm = document.getElementById('contact-form');
+
+// Add an event listener for the form submission
+contactForm.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the form data
+  const formData = new FormData(contactForm);
+
+  // Define the URL where you want to send the POST request
+  const url = 'https://50cc-139-5-157-4.ngrok-free.app/user';
+
+  // Send the POST request using the fetch API
+  fetch(url, {
+    method: 'POST',
+    body: formData,
+  })
+    .then(response => {
+      if (response.ok) {
+        // Request was successful
+        // You can handle the response here (e.g., display a success message)
+      } else {
+        // Request failed
+        // You can handle errors here (e.g., display an error message)
+      }
+    })
+    .catch(error => {
+      // Network error or other issues
+      // Handle the error here
+    });
+});
