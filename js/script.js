@@ -1,3 +1,45 @@
+// HTTP 
+//Post contact message
+const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data and convert it to JSON
+            const formData = {
+                name: form.querySelector('input[name="name"]').value,
+                email: form.querySelector('input[name="email"]').value,
+                phone: form.querySelector('input[name="phone"]').value,
+                subject: form.querySelector('input[name="subject"]').value,
+                message: form.querySelector('textarea[name="message"]').value,
+            };
+
+            // Define the API URL where you want to send the data
+            const apiUrl = "http://127.0.0.1:3000/user"; // Replace with your actual API URL
+
+            // Send a POST request to the API with the JSON data
+            fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+            .then((response) => {
+                // Handle the API response here (e.g., show a success message)
+                if (response.ok) {
+                    alert("Form submitted successfully!");
+                    form.reset();
+                } else {
+                    alert("Form submission failed.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+        });
+
+
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -48,36 +90,3 @@ window.onscroll = () => {
 }
 
 
-// HTTP
-// Get a reference to the form element
-const contactForm = document.getElementById('contact-form');
-
-// Add an event listener for the form submission
-contactForm.addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  // Get the form data
-  const formData = new FormData(contactForm);
-
-  // Define the URL where you want to send the POST request
-  const url = 'https://50cc-139-5-157-4.ngrok-free.app/user';
-
-  // Send the POST request using the fetch API
-  fetch(url, {
-    method: 'POST',
-    body: formData,
-  })
-    .then(response => {
-      if (response.ok) {
-        // Request was successful
-        // You can handle the response here (e.g., display a success message)
-      } else {
-        // Request failed
-        // You can handle errors here (e.g., display an error message)
-      }
-    })
-    .catch(error => {
-      // Network error or other issues
-      // Handle the error here
-    });
-});
