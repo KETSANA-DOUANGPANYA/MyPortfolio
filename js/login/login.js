@@ -1,6 +1,6 @@
 var jwt = localStorage.getItem('jwt');
 if (jwt != null) {
-    window.location.href = 'http://127.0.0.1:5500/admin.html';
+    window.location.href = config.WEB_URL+'admin.html';
 }
 
 // Function to handle form submission
@@ -12,7 +12,7 @@ function handleFormSubmit(event) {
     const password = document.getElementById('floatingPassword').value;
     if (email && password) {
         // Define the API endpoint (replace with your actual API URL)
-        const apiUrl = 'http://127.0.0.1:3000/login'; // Replace with your API URL
+        const apiUrl = config.API_URL+'login'; // Replace with your API URL
 
         // Prepare the data to send to the API
         const data = {

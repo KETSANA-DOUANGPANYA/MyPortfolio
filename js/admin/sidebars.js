@@ -42,7 +42,7 @@ logout.addEventListener('click', function(){
     }).then((result) => {
         if (result.isConfirmed) {
           localStorage.removeItem('jwt');
-          window.location.href = 'http://127.0.0.1:5500/index.html';
+          window.location.href = config.WEB_URL+'index.html';
         }
     })
 });

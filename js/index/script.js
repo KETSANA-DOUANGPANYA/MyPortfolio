@@ -1,3 +1,4 @@
+
 // Login page dialog button alert 
 // Add an event listener to the "Login" 
 const loginLink = document.getElementById('login');
@@ -14,7 +15,7 @@ loginLink.addEventListener('click', function () {
     }).then((result) => {
         if (result.isConfirmed) {
             // Navigate to another page (replace 'your_destination_page.html' with the actual page URL)
-            window.location.href = 'http://127.0.0.1:5500/login.html';
+            window.location.href = config.WEB_URL+'login.html';
         }
     })
 
