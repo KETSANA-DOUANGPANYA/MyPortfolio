@@ -1,25 +1,25 @@
 
 // Login page dialog button alert 
 // Add an event listener to the "Login" 
-const loginLink = document.getElementById('login');
-loginLink.addEventListener('click', function () {
-    // Show an alert
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "Do You want Login Admin?",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Navigate to another page (replace 'your_destination_page.html' with the actual page URL)
-            window.location.href = config.WEB_URL+'login.html';
-        }
-    })
+// const loginLink = document.getElementById('login');
+// loginLink.addEventListener('click', function () {
+//     // Show an alert
+//     Swal.fire({
+//         title: 'Are you sure?',
+//         text: "Do You want Login Admin?",
+//         icon: 'warning',
+//         showCancelButton: true,
+//         confirmButtonColor: '#3085d6',
+//         cancelButtonColor: '#d33',
+//         confirmButtonText: 'Yes'
+//     }).then((result) => {
+//         if (result.isConfirmed) {
+//             // Navigate to another page (replace 'your_destination_page.html' with the actual page URL)
+//             window.location.href = config.WEB_URL+'login.html';
+//         }
+//     })
 
-});
+// });
 
 
 
